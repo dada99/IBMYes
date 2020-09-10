@@ -20,9 +20,10 @@ jobs:
     - name: Login IBM Cloud
       env:
         IBM_ACCOUNT: ${{ secrets.IBM_ACCOUNT }}
+        IBM_ACCOUNT_PASS: ${{ secrets.IBM_ACCOUNT_PASS }}
         REGION_NUM: ${{ secrets.REGION_NUM }}
       run: |
-        ./IBM_Cloud_CLI/ibmcloud login $IBM_ACCOUNT -r $REGION_NUM -c 1
+        ./IBM_Cloud_CLI/ibmcloud login -u $IBM_ACCOUNT -p IBM_ACCOUNT_PASS -r $REGION_NUM -c 1
     - name: Target IBM Cloud
       env:
         RESOURSE_ID: ${{ secrets.RESOURSE_ID }}
