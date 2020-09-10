@@ -23,7 +23,7 @@ jobs:
         IBM_ACCOUNT_PASS: ${{ secrets.IBM_ACCOUNT_PASS }}
         REGION_NUM: ${{ secrets.REGION_NUM }}
       run: |
-        ./IBM_Cloud_CLI/ibmcloud login -u $IBM_ACCOUNT -p $IBM_ACCOUNT_PASS -c 9d5d528aa786af01ce99593a82a45a86 -r us-south
+        ./IBM_Cloud_CLI/ibmcloud login -u $IBM_ACCOUNT -p $IBM_ACCOUNT_PASS -c 9afac34f2fd44cfeaec1e8b0d6b85e5d -r us-south
     - name: Target IBM Cloud
       env:
         RESOURSE_ID: ${{ secrets.RESOURSE_ID }}
